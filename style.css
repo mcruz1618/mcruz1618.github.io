@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+
+.card{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    max-width: 580px;
+    border-radius: .75rem;
+    overflow: hidden;
+}
+.card__img img{
+    width: 100%;
+}
+.img__mobile{
+    display: none;
+}
+.card__img, .card__text{
+    flex: 50% 0;
+}
+.card__text{
+    padding: 2rem;
+}
+.text__title, .price__current{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+.text__subtitle{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+}
+.text__title{
+    color: hsl(212, 21%, 14%);
+    font-size: 30px;
+    line-height: 30px;
+    margin: 1.2rem 0;
+}
+.text__paragraph{
+    line-height: 22px;
+    font-weight: 500;
+}
+.prices{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 1.2rem 0;
+    gap: 15px;
+}
+.price__current{
+    color: hsl(158, 36%, 37%);
+    font-size: 30px;
+}
+.price__old{
+    text-decoration: line-through;
+    font-size: 13px;
+}
+.text__btn{
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    gap: 10px;
+    justify-content: center;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    font-size: 14px;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+}
+.text__btn:hover{
+    background-color: hsl(159, 36%, 20%);
+}
+
+@media screen and (max-width:590px) {
+    .img__pc{
+        display: none;
+    }
+    .img__mobile{
+        display: block;
+    }
+    .card{
+        flex-direction: column;
+        width: 400px;
+    }
+    .text__btn{
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width:420px) {
+    .card{
+        width: 90%;
+    }
+}
